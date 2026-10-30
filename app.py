@@ -33,7 +33,7 @@ if prompt := st.chat_input("اكتب رسالتك هنا..."):
         full_response = ""
         try:
             stream = client.chat.completions.create(
-                model="google/gemma-2-9b-it:free",
+                model="model="qwen/qwen-2.5-7b-instruct:free",
                 messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
                 stream=True,
             )
