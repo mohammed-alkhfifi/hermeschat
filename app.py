@@ -33,7 +33,7 @@ if prompt := st.chat_input("اكتب رسالتك هنا..."):
         full_response = ""
         try:
             stream = client.chat.completions.create(
-                model="meta-llama/llama-3.3-70b-instruct:free",
+                model="deepseek/deepseek-r1:free",
                 messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
                 stream=True,
             )
